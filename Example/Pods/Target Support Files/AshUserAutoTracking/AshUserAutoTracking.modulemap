@@ -1,0 +1,6 @@
+framework module AshUserAutoTracking {
+  umbrella header "AshUserAutoTracking-umbrella.h"
+
+  export *
+  module * { export * }
+}

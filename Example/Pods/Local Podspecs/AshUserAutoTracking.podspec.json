@@ -1,0 +1,26 @@
+{
+  "name": "AshUserAutoTracking",
+  "version": "0.0.1",
+  "summary": "TrackingViewController",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ashbass/AshUserAutoTracking",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "AshBass": "ashbass@163.com"
+  },
+  "source": {
+    "git": "https://github.com/ashbass/AshUserAutoTracking.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "AshUserAutoTracking/*",
+  "frameworks": [
+    "UIKit",
+    "Foundation"
+  ]
+}

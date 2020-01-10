@@ -1,0 +1,16 @@
+PODS:
+  - AshUserAutoTracking (0.0.1)
+
+DEPENDENCIES:
+  - AshUserAutoTracking (from `../`)
+
+EXTERNAL SOURCES:
+  AshUserAutoTracking:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AshUserAutoTracking: 7b2a708d89839c33b024afb689847293242c791b
+
+PODFILE CHECKSUM: 24c7eb385ebf32fc8be4b4edc271965d91c46bc1
+
+COCOAPODS: 1.7.5

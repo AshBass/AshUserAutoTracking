@@ -26,7 +26,7 @@
     UIViewController *viewController;
     UIView *tableViewOrCollectionView;
     UIView *cell;
-    while (![responder isKindOfClass:[UIViewController class]]) {
+    while (responder && ![responder isKindOfClass:[UIViewController class]]) {
         if ([responder isKindOfClass:[UITableView class]]||
             [responder isKindOfClass:[UICollectionView class]]) {
             tableViewOrCollectionView = (UIView*)responder;
@@ -37,7 +37,11 @@
         responder = [responder nextResponder];
     }
     viewController = (UIViewController*)responder;
-    
+    if (!viewController) {
+        /// window 上的按钮点击
+        [self AshUserAutoTracking_sendAction:action to:target forEvent:event];
+        return;
+    }
     NSString *route;
     if (!cell) {
         /// .button(eventType[0],selector:foo)

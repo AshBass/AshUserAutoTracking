@@ -13,25 +13,25 @@
 @implementation UIViewController (AshUserAutoTracking)
 
 +(void)load {
-    [self AshUserAutoTracking_exchangeInstanceMethod:self originalSEL:@selector(init) exchangeSEL:@selector(AshUserAutoTracking_init)];
-    [self AshUserAutoTracking_exchangeInstanceMethod:self originalSEL:@selector(initWithCoder:) exchangeSEL:@selector(AshUserAutoTracking_initWithCoder:)];
+//    [self AshUserAutoTracking_exchangeInstanceMethod:self originalSEL:@selector(init) exchangeSEL:@selector(AshUserAutoTracking_init)];
+//    [self AshUserAutoTracking_exchangeInstanceMethod:self originalSEL:@selector(initWithCoder:) exchangeSEL:@selector(AshUserAutoTracking_initWithCoder:)];
     [self AshUserAutoTracking_exchangeInstanceMethod:self originalSEL:@selector(presentViewController:animated:completion:) exchangeSEL:@selector(AshUserAutoTracking_presentViewController:animated:completion:)];
     [self AshUserAutoTracking_exchangeInstanceMethod:self originalSEL:@selector(addChildViewController:) exchangeSEL:@selector(AshUserAutoTracking_addChildViewController:)];
 }
 
--(instancetype)AshUserAutoTracking_init {
-    [self setAshTrackingRoute:[self AshTrackingRename]];
-    [self setAshTrackingRename:NSStringFromClass([self class])];
-    [self setAshTrackingLastActivity:nil];
-    return [self AshUserAutoTracking_init];
-}
+//-(instancetype)AshUserAutoTracking_init {
+//    [self setAshTrackingRoute:[self AshTrackingRename]];
+//    [self setAshTrackingRename:NSStringFromClass([self class])];
+//    [self setAshTrackingLastActivity:nil];
+//    return [self AshUserAutoTracking_init];
+//}
 
--(instancetype)AshUserAutoTracking_initWithCoder:(NSCoder *)coder {
-    [self setAshTrackingRoute:[self AshTrackingRename]];
-    [self setAshTrackingRename:NSStringFromClass([self class])];
-    [self setAshTrackingLastActivity:nil];
-    return [self AshUserAutoTracking_initWithCoder:coder];
-}
+//-(instancetype)AshUserAutoTracking_initWithCoder:(NSCoder *)coder {
+//    [self setAshTrackingRoute:[self AshTrackingRename]];
+//    [self setAshTrackingRename:NSStringFromClass([self class])];
+//    [self setAshTrackingLastActivity:nil];
+//    return [self AshUserAutoTracking_initWithCoder:coder];
+//}
 
 -(void)AshUserAutoTracking_presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion {
     
